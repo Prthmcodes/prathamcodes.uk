@@ -31,22 +31,31 @@ footer {
   color: white;
   margin-top: 20px;
 }
+/* Love hearts animation */
 .love-section {
+  position: relative;
   text-align: center;
   margin-top: 50px;
 }
 
-.love-message {
-  color: red;
-  font-size: 2em;
-  animation: pulse 2s infinite;
-  font-family: 'Comic Sans MS', cursive, sans-serif;
-  line-height: 1.5;
+.heart {
+  position: absolute;
+  font-size: 1.5em;
+  color: pink;
+  animation: floatUp 4s linear infinite;
+  user-select: none;
+  pointer-events: none;
 }
 
-@keyframes pulse {
-  0% { transform: scale(1); opacity: 0.7; }
-  50% { transform: scale(1.2); opacity: 1; }
-  100% { transform: scale(1); opacity: 0.7; }
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-300px) rotate(360deg);
+    opacity: 0;
+  }
 }
+
 
