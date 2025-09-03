@@ -5,6 +5,7 @@ body {
   color: #222;
 }
 
+/* Header */
 header {
   display: flex;
   justify-content: space-between;
@@ -43,37 +44,67 @@ nav a.active {
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
-/* Gallery */
-.gallery {
+/* Projects */
+.project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
   padding: 2rem;
-  justify-items: center;
+}
+
+.project-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.project-card img {
+  width: 80%;              /* smaller than before */
+  max-width: 200px;        /* limit size */
+  height: auto;            /* keep aspect ratio */
+  object-fit: contain;     /* no awkward cropping */
+  border-radius: 8px;
+  margin: 0 auto 0.75rem;  /* center image */
+  display: block;
+}
+
+/* Chess Gallery */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
 }
 
 .gallery figure {
   text-align: center;
-  margin: 0;
+  max-width: 320px;
 }
 
 .gallery img {
   width: 100%;
-  height: auto;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  display: block;
 }
 
-/* Specific image classes */
-.certificate {
-  max-width: 450px;
-  object-fit: contain;
+/* Specific tweaks */
+.gallery img[alt="Chess board"] {
+  width: 280px;       /* bigger casual chess pic */
 }
 
-.casual-chess {
-  max-width: 350px;
-  object-fit: cover;
+.gallery img[alt="Playing chess"] {
+  width: 340px;       /* bigger certificate */
+  height: auto;
+}
+
+.gallery figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: #444;
+  font-weight: 500;
 }
 
 /* Footer */
@@ -85,13 +116,15 @@ footer {
   margin-top: 2rem;
 }
 
-/* Responsive */
+/* Responsive Tweaks */
 @media (max-width: 600px) {
   .profile-pic {
     width: 120px;
     height: 120px;
   }
-  .gallery {
-    grid-template-columns: 1fr;
+  .gallery img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
   }
 }
