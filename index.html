@@ -6,10 +6,15 @@
   <title>Pratham Codes - Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+  <!-- Skip to content -->
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
   <!-- Header -->
   <header class="site-header">
     <div class="logo">Pratham Codes</div>
@@ -26,33 +31,35 @@
     </button>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-left">
-      <!-- ✅ profile.png is in root -->
-      <div class="profile-wrapper">
-        <img src="profile.png" alt="Pratham Profile Photo" class="profile-pic">
-        <div class="glow-ring"></div>
+  <!-- Hero Section -->
+  <main id="main-content">
+    <section class="hero">
+      <div class="hero-left">
+        <div class="profile-wrapper">
+          <!-- ✅ Corrected to profile.jpg -->
+          <img src="profile.jpg" alt="Pratham Profile Photo" class="profile-pic">
+          <div class="glow-ring"></div>
+        </div>
       </div>
-    </div>
-    <div class="hero-right">
-      <h1 class="typing-text">Hello, I’m <span class="highlight">Pratham</span> 👋</h1>
-      <p>Computer Science student at London Metropolitan University</p>
-      <p>Founder, Chess Society | 2016 District Chess Champion</p>
-      <div class="hero-buttons">
-        <a href="projects.html" class="btn">View Projects</a>
-        <a href="contact.html" class="btn btn-alt">Get in Touch</a>
+      <div class="hero-right">
+        <h1 class="typing-text">Hello, I’m <span class="highlight">Pratham</span> 👋</h1>
+        <p>Computer Science student at <b>London Metropolitan University</b></p>
+        <p>Founder, Chess Society | 2016 District Chess Champion</p>
+        <div class="hero-buttons">
+          <a href="projects.html" class="btn">View Projects</a>
+          <a href="chess.html" class="btn btn-alt">My Chess Journey</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer class="site-footer">
     <p>&copy; 2025 Pratham Codes. All rights reserved.</p>
     <div class="socials">
-      <a href="mailto:prthmjhansa@gmail.com"><i class="fas fa-envelope"></i></a>
-      <a href="https://www.linkedin.com/in/pratham-jhansa-95757834a" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com/Prthmcodes" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="mailto:prthmjhansa@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/pratham-jhansa-95757834a" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/Prthmcodes" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
     </div>
   </footer>
 </body>
