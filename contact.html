@@ -1,34 +1,126 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - Pratham Codes</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pratham Codes — Contact</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-/..." crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* small print stylesheet for contact page */
+    @media print {
+      .contact-form, .social-sidebar, .site-header, .site-footer { display: none !important; }
+      .container { width: 100%; padding: 0; }
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Pratham Codes</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="chess.html">Chess</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <a class="skip-link" href="#contact-main">Skip to content</a>
+
+  <header class="site-header" id="site-header-4">
+    <div class="header-inner">
+      <a href="index.html" class="brand" aria-label="Pratham Codes homepage">
+        <div class="logo" aria-hidden="true">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <rect x="1" y="1" width="22" height="22" rx="6" fill="rgba(240,195,48,0.12)"></rect>
+            <path d="M6 18V6h6v12" stroke="#f0c330" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </div>
+        <span class="brand-text"><span class="brand-main">Pratham</span> <span class="brand-sub">Codes</span></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary">
+        <button id="nav-toggle-4" class="nav-toggle" aria-controls="nav-list-4" aria-expanded="false" aria-label="Open menu">
+          <span class="hamburger" aria-hidden="true"><i class="fa-solid fa-bars"></i></span>
+        </button>
+
+        <ul id="nav-list-4" class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="chess.html">Chess</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <h2>Contact Me</h2>
-    <p>If you’d like to collaborate or just say hello, feel free to reach out!</p>
-    <ul class="contact-list">
-      <li><b>Email:</b> <a href="mailto:prthmjhansa@gmail.com">prthmjhansa@gmail.com</a></li>
-      <li><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/pratham-jhansa-95757834a" target="_blank">linkedin.com/in/pratham-jhansa</a></li>
-      <li><b>GitHub:</b> <a href="https://github.com/Prthmcodes" target="_blank">github.com/Prthmcodes</a></li>
-    </ul>
+  <main id="contact-main" tabindex="-1">
+    <section class="section container">
+      <h1 class="section-title">Contact</h1>
+      <p class="section-sub">I'd love to hear from you — have a project, question or just want to say hi?</p>
+
+      <div class="contact-grid">
+        <div class="contact-cards">
+          <div class="contact-card" tabindex="0">
+            <div class="card-icon"><i class="fa-regular fa-envelope"></i></div>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:prthmjhansa@gmail.com">prthmjhansa@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="contact-card" tabindex="0">
+            <div class="card-icon"><i class="fa-brands fa-linkedin"></i></div>
+            <div>
+              <h4>LinkedIn</h4>
+              <a href="https://www.linkedin.com/in/pratham-jhansa-95757834a" target="_blank" rel="noopener">linkedin.com/in/pratham-jhansa-95757834a</a>
+            </div>
+          </div>
+
+          <div class="contact-card" tabindex="0">
+            <div class="card-icon"><i class="fa-brands fa-github"></i></div>
+            <div>
+              <h4>GitHub</h4>
+              <a href="https://github.com/Prthmcodes" target="_blank" rel="noopener">github.com/Prthmcodes</a>
+            </div>
+          </div>
+        </div>
+
+        <form id="contact-form" class="contact-form" novalidate aria-labelledby="contact-form-title">
+          <h2 id="contact-form-title">Send a message</h2>
+
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required>
+            <div class="field-error" aria-live="polite"></div>
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required>
+            <div class="field-error" aria-live="polite"></div>
+          </div>
+
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="Tell me about your project..." required></textarea>
+            <div class="field-error" aria-live="polite"></div>
+          </div>
+
+          <div class="form-row form-actions">
+            <button type="submit" class="btn btn-primary">Send message</button>
+            <small class="muted">This form is a frontend placeholder — no backend attached.</small>
+          </div>
+        </form>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    <p>© 2025 Pratham Codes | Built with ❤️</p>
+  <div id="toast-root" aria-live="polite" aria-atomic="true"></div>
+
+  <footer class="site-footer container">
+    <div class="footer-inner">
+      <small>© <span id="year-4"></span> Pratham Codes</small>
+      <nav aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="chess.html">Chess</a>
+      </nav>
+    </div>
   </footer>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
