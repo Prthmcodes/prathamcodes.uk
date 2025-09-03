@@ -1,49 +1,110 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chess - Pratham Codes</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pratham Codes — Chess Journey</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-/..." crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Pratham Codes</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="chess.html">Chess</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <a class="skip-link" href="#chess-main">Skip to content</a>
+
+  <header class="site-header" id="site-header-3">
+    <div class="header-inner">
+      <a href="index.html" class="brand" aria-label="Pratham Codes homepage">
+        <div class="logo" aria-hidden="true">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <rect x="1" y="1" width="22" height="22" rx="6" fill="rgba(240,195,48,0.12)"></rect>
+            <path d="M6 18V6h6v12" stroke="#f0c330" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </div>
+        <span class="brand-text"><span class="brand-main">Pratham</span> <span class="brand-sub">Codes</span></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary">
+        <button id="nav-toggle-3" class="nav-toggle" aria-controls="nav-list-3" aria-expanded="false" aria-label="Open menu">
+          <span class="hamburger" aria-hidden="true"><i class="fa-solid fa-bars"></i></span>
+        </button>
+
+        <ul id="nav-list-3" class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="chess.html" aria-current="page">Chess</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <h2>My Chess Journey</h2>
-    <section class="chess-intro">
-      <p>
-        I’ve been passionate about chess since childhood. I founded the <b>Chess Society</b> at 
-        London Metropolitan University and also competed in the 
-        <b>2016 District Chess Championship in Kurukshetra, India</b>.
-      </p>
-    </section>
-    <div class="gallery">
-  <img src="images/chess5.jpg" alt="Playing chess">
-  <img src="images/chess6.jpg" alt="Chess Society event">
-  <img src="images/chess3.jpg" alt="Chess board">
-</div>
- </main>
+  <main id="chess-main" tabindex="-1">
+    <section class="section container">
+      <h1 class="section-title">My Chess Journey</h1>
+      <p class="section-sub">From learning moves to founding the University Chess Society and competing at district level.</p>
 
-  <footer>
-    <p>Connect with me on 
-      <a href="https://www.linkedin.com/in/pratham-jhansa-95757834a" target="_blank">LinkedIn</a> | 
-      <a href="https://github.com/Prthmcodes" target="_blank">GitHub</a>
-    </p>
+      <div class="chess-layout">
+        <div class="gallery-grid" id="chess-gallery" aria-label="Chess gallery">
+          <!-- Gallery items -->
+          <figure class="gallery-item reveal" tabindex="0">
+            <img src="assets/chess/chess1.jpg" alt="Pratham playing chess" loading="lazy" data-title="Tournament Play">
+            <figcaption>2016 District Championship — Kurukshetra</figcaption>
+          </figure>
+
+          <figure class="gallery-item reveal" tabindex="0">
+            <img src="assets/chess/chess2.jpg" alt="Chess society event" loading="lazy" data-title="Chess Society Event">
+            <figcaption>Chess Society meet-up</figcaption>
+          </figure>
+
+          <figure class="gallery-item reveal" tabindex="0">
+            <img src="assets/chess/chess3.jpg" alt="Chess board close-up" loading="lazy" data-title="Board Study">
+            <figcaption>Board studies & puzzles</figcaption>
+          </figure>
+
+          <!-- Add more images -->
+        </div>
+
+        <aside class="timeline" aria-label="Chess timeline">
+          <h3>Timeline</h3>
+          <ol>
+            <li>
+              <time datetime="2010">2010</time>
+              <div class="tl-body"><strong>Started learning chess</strong><span>Local coaching & rapid progress</span></div>
+            </li>
+            <li>
+              <time datetime="2016">2016</time>
+              <div class="tl-body"><strong>District Championship</strong><span>Kurukshetra — notable finish</span></div>
+            </li>
+            <li>
+              <time datetime="2022">2022</time>
+              <div class="tl-body"><strong>Founded Chess Society</strong><span>London Metropolitan University</span></div>
+            </li>
+          </ol>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox markup (hidden) -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Image viewer">
+    <button class="lightbox-close" aria-label="Close (Esc)"><i class="fa-solid fa-xmark"></i></button>
+    <button class="lightbox-prev" aria-label="Previous (left arrow)"><i class="fa-solid fa-chevron-left"></i></button>
+    <div class="lightbox-stage" tabindex="0"></div>
+    <button class="lightbox-next" aria-label="Next (right arrow)"><i class="fa-solid fa-chevron-right"></i></button>
+  </div>
+
+  <footer class="site-footer container">
+    <div class="footer-inner">
+      <small>© <span id="year-3"></span> Pratham Codes</small>
+      <nav aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </footer>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
-
-
-
-
-
-
