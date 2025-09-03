@@ -1,44 +1,210 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pratham Codes</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pratham Codes — Home</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-/..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link rel="stylesheet" href="style.css">
+  <meta name="theme-color" content="#161616">
 </head>
 <body>
-  <header>
-    <h1>Pratham Codes</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="chess.html">Chess</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <!-- Skip to main content -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand" aria-label="Pratham Codes homepage">
+        <div class="logo" aria-hidden="true">
+          <!-- SVG monogram -->
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <rect x="1" y="1" width="22" height="22" rx="6" fill="rgba(240,195,48,0.12)"></rect>
+            <path d="M6 18V6h6v12" stroke="#f0c330" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </div>
+        <span class="brand-text"><span class="brand-main">Pratham</span> <span class="brand-sub">Codes</span></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary">
+        <button id="nav-toggle" class="nav-toggle" aria-controls="nav-list" aria-expanded="false" aria-label="Open menu">
+          <span class="hamburger" aria-hidden="true"><i class="fa-solid fa-bars"></i></span>
+        </button>
+
+        <ul id="nav-list" class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="chess.html">Chess</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main class="intro">
-    <img src="profile.jpg" alt="Pratham Profile Photo" class="profile-pic">
-    <section>
-      <h2>Hello, I'm Pratham 👋</h2>
-      <p>
-        I'm a Computer Science student at <b>London Metropolitan University</b>.<br>
-        Founder of the <b>Chess Society</b> at my university.<br>
-        Passionate about coding, problem-solving, and chess.<br>
-        Competed in the <b>2016 District Chess Championship</b> (Kurukshetra, India).
-      </p>
-      <a href="projects.html" class="btn">View My Projects</a>
-      <a href="chess.html" class="btn">My Chess Journey</a>
+  <aside class="social-sidebar" aria-hidden="false">
+    <ul>
+      <li><a href="mailto:prthmjhansa@gmail.com" title="Email"><i class="fa-regular fa-envelope"></i><span class="label">Email</span></a></li>
+      <li><a href="https://www.linkedin.com/in/pratham-jhansa-95757834a" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i><span class="label">LinkedIn</span></a></li>
+      <li><a href="https://github.com/Prthmcodes" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i><span class="label">GitHub</span></a></li>
+    </ul>
+  </aside>
+
+  <main id="main" tabindex="-1">
+    <!-- HERO -->
+    <section class="hero" id="home-hero" aria-labelledby="hero-title">
+      <div class="hero-bg">
+        <!-- CSS animated particles / shapes -->
+        <div class="particles" aria-hidden="true"></div>
+      </div>
+
+      <div class="hero-inner">
+        <div class="hero-left">
+          <div class="profile-wrap" id="profile-wrap" aria-hidden="false">
+            <div class="ring" aria-hidden="true"></div>
+            <img src="assets/profile.jpg" alt="Pratham Jhansa — profile photo" class="profile-img" id="profile-img" />
+          </div>
+          <div class="tiny-badge" aria-hidden="true">London Metropolitan University</div>
+        </div>
+
+        <div class="hero-right">
+          <h1 id="hero-title" class="hero-title">
+            <span class="typing" data-lines='["Hello, I’m Pratham 👋","Computer Science student • Chess enthusiast","Founder — Chess Society • 2016 District Chess Championship (Kurukshetra)"]'></span>
+          </h1>
+          <p class="lead">
+            I build thoughtful web experiences — accessible, performant, and visually refined.
+            I love chess puzzles, teaching students, and making clean code.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href="projects.html"><i class="fa-solid fa-flask"></i> View My Projects</a>
+            <a class="btn btn-ghost" href="chess.html"><i class="fa-solid fa-chess-pawn"></i> My Chess Journey</a>
+          </div>
+
+          <div class="hero-highlights" aria-hidden="true">
+            <div class="highlight">
+              <strong>Founder</strong><span>Chess Society</span>
+            </div>
+            <div class="highlight">
+              <strong>2016</strong><span>District Champion</span>
+            </div>
+            <div class="highlight">
+              <strong>University</strong><span>London Metropolitan</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
+
+    <!-- Featured Projects -->
+    <section class="section section--cards" aria-labelledby="featured-title">
+      <div class="container">
+        <h2 id="featured-title" class="section-title">Featured Projects</h2>
+        <p class="section-sub">Selected projects — code, demos, and writeups.</p>
+
+        <div class="projects-grid preview-grid" id="featured-projects">
+          <!-- Card 1 -->
+          <article class="project-card reveal" tabindex="0" data-tags="javascript,web">
+            <div class="card-media">
+              <img src="assets/projects/project1.jpg" alt="Screenshot of Java Calculator project" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Java Calculator</h3>
+              <p class="card-desc">A lightweight cross-platform calculator built with Java & clean UI.</p>
+              <div class="tags">
+                <span class="tag">Java</span>
+                <span class="tag">Desktop</span>
+              </div>
+              <div class="card-actions">
+                <a class="icon-btn" href="https://github.com/Prthmcodes/JavaCalculator" target="_blank" rel="noopener" aria-label="Open GitHub repo"><i class="fa-brands fa-github"></i></a>
+                <a class="btn btn-sm" href="#" aria-label="Open demo">Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="project-card reveal" tabindex="0" data-tags="game,js">
+            <div class="card-media">
+              <img src="assets/projects/project2.jpg" alt="Screenshot of Rock Paper Scissors" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Rock Paper Scissors</h3>
+              <p class="card-desc">Classic game with slick animation and score persistence.</p>
+              <div class="tags"><span class="tag">JS</span><span class="tag">Game</span></div>
+              <div class="card-actions">
+                <a class="icon-btn" href="https://github.com/Prthmcodes/Rock-paper-scissors" target="_blank" rel="noopener" aria-label="Open GitHub repo"><i class="fa-brands fa-github"></i></a>
+                <a class="btn btn-sm" href="#" aria-label="Open demo">Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="project-card reveal" tabindex="0" data-tags="web,ui">
+            <div class="card-media">
+              <img src="assets/projects/project3.jpg" alt="Screenshot of personal site redesign" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Portfolio Redesign</h3>
+              <p class="card-desc">This very portfolio — modern UI, accessible patterns, and animations.</p>
+              <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span></div>
+              <div class="card-actions">
+                <a class="icon-btn" href="https://github.com/Prthmcodes" target="_blank" rel="noopener" aria-label="Open GitHub repo"><i class="fa-brands fa-github"></i></a>
+                <a class="btn btn-sm" href="projects.html" aria-label="View more projects">See all</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Small footer CTA -->
+    <section class="section section--cta">
+      <div class="container cta-inner">
+        <div>
+          <h3>Want to collaborate?</h3>
+          <p>Open to freelance, tutoring, and new projects. Let’s connect.</p>
+        </div>
+        <div>
+          <a href="contact.html" class="btn btn-primary">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <footer>
-    <p>Connect with me on 
-      <a href="mailto:prthmjhansa@gmail.com">Gmail</a> | 
-      <a href="https://www.linkedin.com/in/pratham-jhansa-95757834a" target="_blank">LinkedIn</a> | 
-      <a href="https://github.com/Prthmcodes" target="_blank">GitHub</a>
-    </p>
+  <button id="to-top" class="to-top" aria-label="Scroll to top" title="Top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner container">
+      <div class="footer-left">
+        <small>© <span id="year"></span> Pratham Codes — Built with care.</small>
+      </div>
+      <div class="footer-right">
+        <nav aria-label="Footer">
+          <a href="index.html">Home</a>
+          <a href="projects.html">Projects</a>
+          <a href="chess.html">Chess</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
   </footer>
+
+  <!-- Light DOM fallbacks for no-js users -->
+  <noscript>
+    <style>
+      .nav-toggle { display: none; }
+      .nav-list { display: flex !important; }
+    </style>
+  </noscript>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
-
