@@ -1,14 +1,16 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", Tahoma, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f2f2f2;
+  background-color: #fdfdfd;
+  color: #333;
 }
 
+/* Header */
 header {
-  background-color: #333;
+  background: #1a1a1a;
   color: white;
-  padding: 10px 20px;
+  padding: 15px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,21 +18,67 @@ header {
 
 nav a {
   color: white;
-  margin-left: 15px;
+  margin-left: 20px;
   text-decoration: none;
+  font-weight: bold;
 }
 
-main {
-  padding: 20px;
+nav a:hover {
+  color: #f0c330;
 }
 
+/* Intro Section */
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 20px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.intro h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.intro p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 24px;
+  background: #1a1a1a;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #f0c330;
+  color: #1a1a1a;
+}
+
+/* Footer */
 footer {
   text-align: center;
-  padding: 10px;
-  background-color: #333;
+  padding: 15px;
+  background: #1a1a1a;
   color: white;
-  margin-top: 20px;
+  margin-top: 40px;
 }
-
-
-
