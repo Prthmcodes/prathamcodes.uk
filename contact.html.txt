@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Pratham Codes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Pratham Codes</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="chess.html">Chess</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Contact Me</h2>
+    <p>If you’d like to collaborate or just say hello, feel free to reach out!</p>
+    <ul class="contact-list">
+      <li><b>Email:</b> <a href="Prthmjhansa@gmail.com">your-email@example.com</a></li>
+      <li><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/pratham-jhansa-95757834a" target="_blank">linkedin.com/in/pratham-jhansa</a></li>
+      <li><b>GitHub:</b> <a href="https://github.com/Prthmcodes" target="_blank">github.com/Prthmcodes</a></li>
+    </ul>
+  </main>
+
+  <footer>
+    <p>© 2025 Pratham Codes | Built with ❤️</p>
+  </footer>
+</body>
+</html>
