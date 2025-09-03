@@ -45,7 +45,6 @@ nav a:hover {
   object-fit: cover;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
-
 .intro h2 {
   font-size: 2rem;
   margin-bottom: 15px;
@@ -114,15 +113,14 @@ footer {
   gap: 15px;
   margin-top: 20px;
 }
-
 .gallery img {
   width: 250px;
   height: 180px;
-  object-fit: cover;
+  object-fit: contain;   /* makes full photo visible */
+  background: #000;      /* optional: adds background if aspect ratio doesn’t match */
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
-
 /* Contact page */
 .contact-list {
   list-style: none;
@@ -135,5 +133,6 @@ footer {
   margin: 10px 0;
   font-size: 1.1rem;
 }
+
 
 
