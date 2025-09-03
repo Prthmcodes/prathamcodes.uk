@@ -90,9 +90,16 @@ nav a.active {
 
 /* Special class for certificate */
 .certificate {
-  max-width: 400px;
+  max-width: 450px;
   height: auto;
   object-fit: contain;
+}
+
+/* Special class for casual chess image */
+.casual-chess {
+  max-width: 350px;
+  height: auto;
+  object-fit: cover;
 }
 
 /* Footer */
