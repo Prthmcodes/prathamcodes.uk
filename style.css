@@ -61,12 +61,12 @@ nav a.active {
 }
 
 .project-card img {
-  width: 80%;              /* smaller than before */
-  max-width: 200px;        /* limit size */
-  height: auto;            /* keep aspect ratio */
-  object-fit: contain;     /* no awkward cropping */
+  width: 60%;              /* smaller thumbnail style */
+  max-width: 150px;        /* keep it neat */
+  height: auto;            /* preserve proportions */
+  object-fit: contain;     /* no stretching */
   border-radius: 8px;
-  margin: 0 auto 0.75rem;  /* center image */
+  margin: 0 auto 1rem;     /* center image */
   display: block;
 }
 
@@ -92,11 +92,11 @@ nav a.active {
 
 /* Specific tweaks */
 .gallery img[alt="Chess board"] {
-  width: 280px;       /* bigger casual chess pic */
+  width: 280px;       /* casual chess fun */
 }
 
 .gallery img[alt="Playing chess"] {
-  width: 340px;       /* bigger certificate */
+  width: 340px;       /* certificate */
   height: auto;
 }
 
