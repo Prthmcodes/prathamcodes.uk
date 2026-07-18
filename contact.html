@@ -4,28 +4,67 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact - Pratham Codes</title>
+  <meta name="description" content="Get in touch with Pratham — email, GitHub and LinkedIn.">
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div class="logo">Pratham Codes</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="chess.html">Chess</a>
-      <a href="contact.html" class="active">Contact</a>
-    </nav>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo"><span class="logo-mark">&#9822;</span>Pratham Codes</a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="chess.html">Chess</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <h1>Contact Me</h1>
-    <p>Email: <a href="mailto:prthmjhansa@gmail.com">prthmjhansa@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/Prthmcodes" target="_blank">github.com/Prthmcodes</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/pratham-jhansa-95757834a" target="_blank">LinkedIn</a></p>
+    <section class="page-head">
+      <p class="eyebrow rise rise-1">Say hello</p>
+      <h1 class="rise rise-2">Contact Me</h1>
+      <p class="lead rise rise-3">Always happy to talk about a project, an opportunity &mdash; or a game of chess.</p>
+    </section>
+
+    <section class="contact-grid">
+      <a href="mailto:prthmjhansa@gmail.com" class="contact-card rise rise-2">
+        <span class="contact-glyph" aria-hidden="true">@</span>
+        <span class="contact-label">Email</span>
+        <span class="contact-value">prthmjhansa@gmail.com</span>
+        <span class="contact-cta">Write me a message <span class="arrow" aria-hidden="true">&rarr;</span></span>
+      </a>
+
+      <a href="https://github.com/Prthmcodes" target="_blank" rel="noopener" class="contact-card rise rise-3">
+        <span class="contact-glyph" aria-hidden="true">&lt;/&gt;</span>
+        <span class="contact-label">GitHub</span>
+        <span class="contact-value">github.com/Prthmcodes</span>
+        <span class="contact-cta">See what I&rsquo;m building <span class="arrow" aria-hidden="true">&rarr;</span></span>
+      </a>
+
+      <a href="https://www.linkedin.com/in/pratham-jhansa-95757834a" target="_blank" rel="noopener" class="contact-card rise rise-4">
+        <span class="contact-glyph" aria-hidden="true">in</span>
+        <span class="contact-label">LinkedIn</span>
+        <span class="contact-value">Pratham Jhansa</span>
+        <span class="contact-cta">Let&rsquo;s connect <span class="arrow" aria-hidden="true">&rarr;</span></span>
+      </a>
+    </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Pratham Codes</p>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-brand"><span class="logo-mark">&#9822;</span>Pratham Codes</p>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="chess.html">Chess</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="footer-copy">&copy; 2025 Pratham Codes</p>
+    </div>
   </footer>
 </body>
 </html>

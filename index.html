@@ -4,31 +4,61 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pratham Codes - Portfolio</title>
+  <meta name="description" content="Portfolio of Pratham — Computer Science student at London Metropolitan University, founder of the Chess Society and 2016 District Chess Champion.">
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div class="logo">Pratham Codes</div>
-    <nav>
-      <a href="index.html" class="active">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="chess.html">Chess</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo"><span class="logo-mark">&#9822;</span>Pratham Codes</a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="index.html" class="active">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="chess.html">Chess</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
 
   <main>
     <section class="hero">
-      <img src="profile.jpg" alt="Pratham" class="profile-pic">
-      <h1>Hello, I’m <span>Pratham</span> 👋</h1>
-      <p>Computer Science student at London Metropolitan University</p>
-      <p>Founder, Chess Society | 2016 District Chess Champion</p>
+      <div class="hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow rise rise-1">Portfolio &middot; London</p>
+          <h1 class="rise rise-2">Hello, I&rsquo;m <span class="accent">Pratham</span> <span class="wave">&#128075;</span></h1>
+          <p class="lead rise rise-3">Computer Science student at London Metropolitan University</p>
+          <ul class="chips rise rise-3">
+            <li>Founder, Chess Society</li>
+            <li>2016 District Chess Champion</li>
+          </ul>
+          <div class="cta-row rise rise-4">
+            <a href="projects.html" class="btn btn-primary">View my projects <span class="arrow" aria-hidden="true">&rarr;</span></a>
+            <a href="contact.html" class="btn btn-ghost">Get in touch</a>
+          </div>
+        </div>
+        <div class="hero-photo rise rise-2">
+          <div class="photo-frame">
+            <img src="profile.jpg" alt="Pratham" width="2460" height="2849" fetchpriority="high">
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Pratham Codes</p>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-brand"><span class="logo-mark">&#9822;</span>Pratham Codes</p>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="chess.html">Chess</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="footer-copy">&copy; 2025 Pratham Codes</p>
+    </div>
   </footer>
 </body>
 </html>
