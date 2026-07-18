@@ -680,4 +680,121 @@ footer b{color:var(--lime)}
   );
   const core=new THREE.Mesh(
     new THREE.IcosahedronGeometry(.9,2),
-    new T
+    new THREE.MeshBasicMaterial({color:0x7b5cff,wireframe:true,transparent:true,opacity:.7})
+  );
+  group.add(ico,icoOuter,core);
+  group.position.set(3.4,0,0);
+  scene.add(group);
+
+  const ringGeo=new THREE.TorusGeometry(4.4,.012,8,120);
+  const ring1=new THREE.Mesh(ringGeo,new THREE.MeshBasicMaterial({color:0xc8ff2e,transparent:true,opacity:.3}));
+  const ring2=new THREE.Mesh(ringGeo,new THREE.MeshBasicMaterial({color:0x2ee6ff,transparent:true,opacity:.2}));
+  ring1.rotation.x=Math.PI/2.3;ring2.rotation.x=Math.PI/1.7;ring2.rotation.y=.5;
+  group.add(ring1,ring2);
+
+  const grid=new THREE.GridHelper(60,60,0x1c1c2e,0x11111e);
+  grid.position.y=-5.5;
+  scene.add(grid);
+
+  let mouseX=0,mouseY=0,scrollYv=0;
+  addEventListener('mousemove',e=>{
+    mouseX=(e.clientX/innerWidth-.5)*2;
+    mouseY=(e.clientY/innerHeight-.5)*2;
+  });
+  addEventListener('scroll',()=>{scrollYv=window.scrollY});
+
+  function resize(){
+    renderer.setSize(innerWidth,innerHeight);
+    camera.aspect=innerWidth/innerHeight;
+    camera.updateProjectionMatrix();
+    group.position.x=innerWidth<900?0:3.4;
+  }
+  addEventListener('resize',resize);resize();
+
+  const clock=new THREE.Clock();
+  (function animate(){
+    const t=clock.getElapsedTime();
+    ico.rotation.x=t*.25;ico.rotation.y=t*.35;
+    icoOuter.rotation.x=-t*.15;icoOuter.rotation.y=-t*.2;
+    core.rotation.x=t*.6;core.rotation.y=-t*.5;
+    core.scale.setScalar(1+Math.sin(t*2)*.12);
+    ring1.rotation.z=t*.3;ring2.rotation.z=-t*.22;
+    stars.rotation.y=t*.02+scrollYv*.0004;
+    group.position.y=Math.sin(t*.8)*.25 - scrollYv*.002;
+    group.rotation.y=scrollYv*.0012;
+    camera.position.x+=((mouseX*.9)-camera.position.x)*.04;
+    camera.position.y+=((-mouseY*.6)-camera.position.y)*.04;
+    camera.lookAt(0,0,0);
+    grid.position.z=(t*.6)%1;
+    renderer.render(scene,camera);
+    requestAnimationFrame(animate);
+  })();
+})();
+
+/* ================= TYPEWRITER ================= */
+(function(){
+  const roles=['full_stack_developer','python_enthusiast','cs_student@london_met','builder_of_real_things'];
+  const el=document.getElementById('roleTxt');
+  let ri=0,ci=0,del=false;
+  (function type(){
+    const w=roles[ri];
+    el.textContent=w.slice(0,ci);
+    if(!del){
+      if(ci<w.length){ci++;setTimeout(type,65)}
+      else{del=true;setTimeout(type,2000)}
+    }else{
+      if(ci>0){ci--;setTimeout(type,30)}
+      else{del=false;ri=(ri+1)%roles.length;setTimeout(type,400)}
+    }
+  })();
+})();
+
+/* ================= GLITCH LOOP ================= */
+setInterval(()=>{
+  const g=document.getElementById('glitchName');
+  g.classList.add('go');setTimeout(()=>g.classList.remove('go'),400);
+},4200);
+
+/* ================= SCROLL % HUD ================= */
+addEventListener('scroll',()=>{
+  const p=Math.round(window.scrollY/(document.body.scrollHeight-innerHeight)*100)||0;
+  document.getElementById('scrollPct').textContent=String(p).padStart(3,'0');
+});
+
+/* ================= MARQUEE DUP ================= */
+(function(){const t=document.getElementById('mqTrack');t.innerHTML+=t.innerHTML})();
+
+/* ================= REVEAL ================= */
+const io=new IntersectionObserver(es=>{
+  es.forEach((e,i)=>{if(e.isIntersecting){
+    setTimeout(()=>e.target.classList.add('in'),(i%4)*90);
+    io.unobserve(e.target);
+  }});
+},{threshold:.1});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+/* ================= MAGNETIC BUTTONS ================= */
+document.querySelectorAll('.mag-btn,.soc').forEach(btn=>{
+  btn.addEventListener('mousemove',e=>{
+    const r=btn.getBoundingClientRect();
+    const x=(e.clientX-r.left-r.width/2)*.25;
+    const y=(e.clientY-r.top-r.height/2)*.35;
+    btn.style.transform=`translate(${x}px,${y}px)`;
+  });
+  btn.addEventListener('mouseleave',()=>{btn.style.transform=''});
+});
+
+/* ================= MOBILE MENU ================= */
+(function(){
+  const b=document.getElementById('menuBtn'),n=document.getElementById('navR');
+  b.addEventListener('click',()=>{
+    n.classList.toggle('open');
+    b.textContent=n.classList.contains('open')?'CLOSE':'MENU';
+  });
+  n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+    n.classList.remove('open');b.textContent='MENU';
+  }));
+})();
+</script>
+</body>
+</html>
